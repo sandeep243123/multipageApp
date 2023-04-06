@@ -3,17 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:multipage/main.dart';
 
 class newPage extends StatelessWidget{
+  const newPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('New page'),
+        backgroundColor: Colors.orange,
+        title: const Text('New page'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
+          const Center(
             child: Text('Click to new Page',
             style: TextStyle(
               fontSize: 25,
@@ -22,14 +25,14 @@ class newPage extends StatelessWidget{
             ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 11,
           ),
           ElevatedButton(onPressed: (){
-            Navigator.push(context,MaterialPageRoute(builder: (context)=>MyHomePage(title: 'hello',),
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>MyHomePage(),
             )
             );
-          }, child: Text('next')),
+          }, child: const Text('next')),
 
         ],
       )
